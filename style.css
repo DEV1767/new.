@@ -3,7 +3,7 @@
     padding: 0px;
 }
 .heading1{
- height: 50px;
+ height:35px;
  width: 100%;
  background-color: rgb(178, 140, 66);
  display:flex;
@@ -105,4 +105,5 @@
 .backbtn:hover{
  transform: scale(1);
  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
 }
