@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chong+Modern&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <title>Indalnova</title>
+</head>
+<body>
+    <section>
+        <div class="heading1">
+           <h4>Click here to Explore our Products.</h4>
+        </div>
+    </section>
+    <section>
+        <div class="navbar">
+            <div class="logo">Indalnova</div>
+            <div class="nav-links">
+                <a href="#">Skine care</a>
+                <a href="#">Perfume</a>
+                <a href="#">Track order</a>
+                <a href="#">Offers*</a>
+            </div>
+            <div class="options">
+                <span id="log" onclick="openmodal()"><i class="fa-solid fa-user" style="color: brown;"></i></span>
+                <span id="ham" onclick="hideelement()"><i class="fa-solid fa-bars" style="color: brown;"></i></span>
+            </div>
+        </div>
+
+    </section>
+    <section>
+        <div class="nav-2">
+            <div class="skincare"><a href="">Skine Care</a></div>
+            <div class="perfume"><a href="">Perfume</a></div>
+            <div class="New"><a href="">New products</a></div>
+            <div class="track"><a href="">Track order</a></div>
+            <div class="products"><a href="">Our Products</a></div>
+            <div class="return"><a href="">Return order</a></div>
+            <div class="backbtn" onclick="back()"><button>Back</button></div>
+        </div>
+    </section>
+    <section>
+         <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Login/Sign Up</h2>
+      <form action="/login" method="POST">
+        <input type="email" name="email" placeholder="Enter Email" required>
+        <input type="password" name="password" placeholder="Enter Password" required>
+        <button type="submit">Continue</button>
+      </form>
+    </div>
+  </div>
+    </section>
+    <section>
+        <div class="hero-slider">
+            <div id="slider">
+                <img src="Assets/banner2q.jpeg" alt="">
+                <img src="Assets/salebanner.jpg" alt="">
+                <img src="Assets/banner2q.jpeg" alt="">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="feature">
+            <div class="cod">
+                <div class="img">
+                <i class="fa-solid fa-sack-dollar"></i>
+                </div>
+                <p>COD Available</p>
+            </div>
+            <div class="return">
+                <div class="img">
+                    <i class="fa-solid fa-recycle"></i> 
+                </div>
+                <p>Easy Return</p>
+            </div>
+            <div class="delivery">
+                <div class="img">
+                    <i class="fa-solid fa-truck"></i> 
+                </div>
+                <p>Fast Delivery</p>
+            </div>
+            <div class="secure">
+                <div class="img">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <p>Secure payment</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1 id="pro-h1">Explore by Category</h1>
+        <div class="product">
+            <div class="pro1">
+                <div class="pro-img"></div>
+                <p>Skin care</p>
+            </div>
+          
+            <div class="pro1">
+                <div class="pro-img">
+                </div>
+               <p>Perfumes</p>
+            </div>
+        </div>
+    </section>
+
+   <script src="script.js"></script>
+</body>
+</html>
