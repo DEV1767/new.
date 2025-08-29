@@ -337,6 +337,7 @@ body{
   color:white;
   font-family: 'Poppins', sans-serif ;
   cursor: pointer;
+  gap:15px;
 
 }
 .details{
@@ -364,4 +365,5 @@ body{
 .fa-star {
   font-size: 11px; 
   color: goldenrod;    
+
 }
