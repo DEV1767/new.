@@ -147,7 +147,7 @@ body{
   padding: 20px;
   border-radius: 12px;
   width: 380px;
-  height: 190px;
+  height:auto;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
  }
     input {
@@ -176,6 +176,7 @@ body{
  }
 .modal-content h2{
   font-size: 20px;
+    font-family:'Poppins', sans-serif;
 }
 .hero-slider{
   width: 100%;
@@ -367,3 +368,4 @@ body{
   color: goldenrod;    
 
 }
+
