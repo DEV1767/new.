@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chong+Modern&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <title>Indalnova</title>
+</head>
+<body>
+    <section>
+        <div class="heading1">
+           <h4>Click here to Explore our Products.</h4>
+        </div>
+    </section>
+    <section>
+        <div class="navbar">
+            <div class="logo">Indalnova</div>
+            <div class="nav-links">
+                <a href="#">Skine care</a>
+                <a href="#">Perfume</a>
+                <a href="#">Track order</a>
+                <a href="#">Offers*</a>
+            </div>
+            <div class="options">
+                <span id="log" onclick="openmodal()"><i class="fa-solid fa-user" style="color: brown;"></i></span>
+                <span id="ham" onclick="hideelement()"><i class="fa-solid fa-bars" style="color: brown;"></i></span>
+            </div>
+        </div>
+
+    </section>
+    <section>
+        <div class="nav-2">
+            <div class="skincare"><a href="">Skine Care</a></div>
+            <div class="perfume"><a href="">Perfume</a></div>
+            <div class="New"><a href="">New products</a></div>
+            <div class="track"><a href="">Track order</a></div>
+            <div class="products"><a href="">Our Products</a></div>
+            <div class="return"><a href="">Return order</a></div>
+            <div class="backbtn" onclick="back()"><button>Back</button></div>
+        </div>
+    </section>
+    <section>
+         <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Login/Sign Up</h2>
+      <form action="/login" method="POST">
+        <input type="email" name="email" placeholder="Enter Email" required>
+        <input type="password" name="password" placeholder="Enter Password" required>
+        <button type="submit">Continue</button>
+      </form>
+    </div>
+  </div>
+    </section>
+    <section>
+        <div class="hero-slider">
+            <div id="slider">
+                <img src="Assets/banner2q.jpeg" alt="">
+                <img src="Assets/salebanner.jpg" alt="">
+                <img src="Assets/banner2q.jpeg" alt="">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="feature">
+            <div class="cod">
+                <div class="img">
+                <i class="fa-solid fa-sack-dollar"></i>
+                </div>
+                <p>COD Available</p>
+            </div>
+            <div class="return">
+                <div class="img">
+                    <i class="fa-solid fa-recycle"></i> 
+                </div>
+                <p>Easy Return</p>
+            </div>
+            <div class="delivery">
+                <div class="img">
+                    <i class="fa-solid fa-truck"></i> 
+                </div>
+                <p>Fast Delivery</p>
+            </div>
+            <div class="secure">
+                <div class="img">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <p>Secure payment</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1 id="pro-h1">Explore by Category</h1>
+        <div class="product">
+            <div class="pro1">
+                <div class="pro-img"></div>
+                <p>Skin care</p>
+            </div>
+          
+            <div class="pro1">
+                <div class="pro-img">
+                </div>
+               <p>Perfumes</p>
+            </div>
+        </div>
+    </section>
+    <section>
+       <div class="our-products">
+          <h1 id="Explore-h1">Explore Our Best products</h1>
+           <div class="product-container">
+               <div class="top-product">
+                 <div class="product-img"></div>
+                  <div class="details">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>4.7 | 1234
+                    </div>
+                   <p>Ubtan-Fashwash</p>
+                   <p>Price: $4</p>
+                    <div class="atc">
+                        Add to cart<i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </div>
+               </div>
+                <div class="top-product">
+                 <div class="product-img"></div>
+                  <div class="details">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>4.7 | 1234
+                    </div>
+                   <p>Neem & Alovera Fashwash</p>
+                   <p>Price:$4</p>
+                    <div class="atc">
+                        Add to cart<i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </div>
+               </div>
+           </div>
+       </div>
+    </section>
+    <section>
+        <div class="owner-viedo">
+            <div class="viedo-container">
+                <div class="viedo"> </div>
+                <div class="viedo"></div>
+                <div class="viedo"></div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="new-product">
+            <div class="box1"> </div>
+            <div class="box2"></div>
+        </div>
+    </section>
+    <section>
+        <h1 id="founder">Meet Our Founders</h1>
+        <div class="founders">
+            <div class="founder-img1">
+                <div class="image-founder1"></div>
+            </div>
+
+            <div class="content">
+                <p>I started Indalnova at just 16 because i was  tired of shortcuts and false promises in skincare. I wanted to solve real skin problems with real ingredients—pure, honest, and effective.</p>
+
+                <p>Our mission is simple: to make skincare in India trustworthy, effective, and affordable for everyone. At Indalnova, we believe in harmonizing nature with science, so your skin feels confident every single day.</p>
+
+                <p>For us, it’s not just about products—it’s about creating a lifestyle of self-love and purity. That’s why we stay true to our core values: sustainability, quality, safety, and community. We responsibly source our ingredients, keep our formulations clean and toxin-free, and give back through wellness and empowerment initiatives.</p>
+
+                <p>Every drop of Indalnova is crafted with care—lightweight, plant-based, cruelty-free, and made for all skin types, especially sensitive skin. Our products are, created in small batches, and designed for glow, balance,and long-term skin health.</p>
+ 
+                <p>Indalnova is not just skincare—it’s our promise to nurture skin, naturally.</p>
+
+                <p><b>— Aniket Singh Thakur, Founders of Indalnova</b></p>
+
+            </div>
+            
+            <div class="founder-img">
+                <div class="image-founder"> </div>
+
+            </div>
+            
+        </div>
+    </section>
+    <section>
+        <div class="why-us">
+            <h1 id="why-us">Because Trust Matters <i class="fa-solid fa-handshake"></i></h1>
+            <div class="why-us-reason">
+             
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="other-reviews">
+           <!---- <h1 id="other-reviews">Verified Reviews From Other Platforms</h1> -->
+        </div>
+    </section>
+  <section>
+    <footer>
+        <div class="footer">
+            <div class="Links">
+                  <div class="skincare"><a href="">Skine Care</a></div>
+                  <div class="perfume"><a href="">Perfume</a></div>
+                  <div class="New"><a href="">New products</a></div>
+                  <div class="track"><a href="">Track order</a></div>
+                  <div class="products"><a href="">Our Products</a></div>
+                  <div class="return"><a href="">Return order</a></div>
+            </div>
+        </div>
+    </footer>
+  </section>
+
+   <script src="script.js"></script>
+</body>
+</html>
