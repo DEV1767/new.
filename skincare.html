@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chong+Modern&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <title>Skine care</title>
+  <style>
+    .skincare-product-container {
+      height: 100%;
+      width: 100%;
+      margin-top: 30px;
+      padding: 30px;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .skincare-product {
+      height: 250px;
+      width: 550px;
+      border: 2px solid black;
+      background-color: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      gap: 10px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .skincare-product-image {
+      height: 200px;
+      width: 180px;
+      border-radius: 10px;
+    }
+
+    .product-details-box {
+      height: 200px;
+      width: 400px;
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+
+    #skincare-name {
+      font-size: 22px;
+      color: brown;
+      font-weight: 550;
+    }
+
+    #price {
+      font-size: 18px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .price-detail {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    #actual-price {
+      text-decoration: line-through;
+      color: grey;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #discount {
+      height: 23px;
+      width: 50px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(0, 128, 0);
+      font-size: 13px;
+      color: white;
+    }
+
+    #alert {
+      font-size: 10px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .skincare-atc {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 5px;
+
+    }
+
+    .skincare-atc button {
+      height: 40px;
+      width: 320px;
+      border-radius: 20px;
+      cursor: pointer;
+      background-color: #b28c42;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      border: none;
+      font-size: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skincare-atc button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75px;
+      width: 50px;
+      height: 100%;
+      background: linear-gradient(120deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+      transform: skewX(-25deg);
+      animation: shine 2.5s infinite;
+    }
+
+    .skin-rating {
+      height: 25px;
+      width: 100px;
+      border: 2px solid gray;
+      border-radius: 10px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: brown;
+    }
+
+    #note {
+      font-size: 10px;
+    }
+
+    @media screen and (max-width:1024px) {
+      .skincare-product-container {
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+      }
+    }
+
+    @media screen and (max-width:440px) {
+      .skincare-product {
+        flex-direction: column;
+        padding: 10px;
+      }
+
+      .skincare-product-container {
+        padding: 0px;
+        margin-top: 70px;
+      }
+
+      .skincare-product {
+        height: auto;
+        width: auto;
+      }
+
+      .product-details-box {
+        height: auto;
+        width: auto;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="heading1">
+      <h4>Click here to Explore our Products.</h4>
+    </div>
+  </section>
+  <section>
+    <div class="navbar">
+      <div class="logo">Skin care</div>
+      <div class="nav-links">
+        <a href="perfume.html">Perfume</a>
+        <a href="#">Track order</a>
+        <a href="#">Offers*</a>
+      </div>
+      <div class="options">
+        <!--- <span id="log" onclick="openmodal()"><i class="fa-solid fa-user" style="color: brown;"></i></span>-->
+        <!--- <span id="Cart" onclick="window.location.href='cart.html'"><i class="fa-solid fa-cart-shopping" style="color: brown;"></i></span>-->
+        <span id="Back" onclick="window.location.href='index.html'"><i class="fa-solid fa-left-long"
+            style="color: brown;"></i></span>
+      </div>
+    </div>
+
+  </section>
+  <section>
+    <div class="nav-2">
+      <div class="perfume"><a href="">Perfume</a></div>
+      <div class="track"><a href="">Track order</a></div>
+      <div class="return"><a href="">Return order</a></div>
+      <div class="backbtn" onclick="back()"><button>Back</button></div>
+    </div>
+  </section>
+  <div class="skincare-product-container">
+    <div class="skincare-product">
+      <div class="skincare-product-image"></div>
+      <div class="product-details-box">
+        <span id="skincare-name">Neem & Alovera Faschwash</span>
+        <div class="price-detail">
+          <span id="price">&#x20B9;297</span><span id="actual-price">&#x20B9;300</span><span id="discount">3%</span>
+        </div>
+        <span id="alert">MRP Inclusive Of All Taxes</span>
+        <div class="skin-rating">
+          <i class="fa-solid fa-star"></i>4.7 | 1234
+        </div>
+        <div class="skincare-atc">
+          <button>Add to cart <i class="fa-solid fa-cart-shopping" style="margin-left:15px;"></i></button>
+          <span id="note">* Delivery will take approx 2-7 days.</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="skincare-product">
+      <div class="skincare-product-image"></div>
+      <div class="product-details-box">
+        <span id="skincare-name">Neem & Alovera Faschwash</span>
+        <div class="price-detail">
+          <span id="price">&#x20B9;297</span><span id="actual-price">&#x20B9;300</span><span id="discount">3%</span>
+        </div>
+        <span id="alert">MRP Inclusive Of All Taxes</span>
+        <div class="skin-rating">
+          <i class="fa-solid fa-star"></i>4.7 | 1234
+        </div>
+        <div class="skincare-atc">
+          <button>Add to cart <i class="fa-solid fa-cart-shopping" style="margin-left:15px;"></i></button>
+          <span id="note">* Delivery will take approx 2-7 days.</span>
+        </div>
+
+      </div>
+    </div>
+    <section>
