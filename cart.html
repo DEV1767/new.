@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Cart Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+        }
+
+        .cart-main-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .added-product-container {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .added-product-details {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .added-product-image {
+            height: 100px;
+            width: 100px;
+            background: #ddd;
+            border-radius: 10px;
+        }
+
+        .added-product-price {
+            flex: 1;
+            margin-left: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        #added-product-name {
+            font-weight: 600;
+            font-size: 1rem;
+            color: brown;
+        }
+
+        #added-product-weight {
+            font-size: 0.85rem;
+            color: gray;
+        }
+
+        .quantity {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .quantity button {
+            border: none;
+            background: #eee;
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .quantity .qty {
+            min-width: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .total-added-price {
+            display: flex;
+            gap: 40px;
+            align-items: flex-end;
+        }
+
+        #total-price-of-product {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        #remove i {
+            cursor: pointer;
+            color: red;
+            font-size: 1.2rem;
+        }
+
+        .checkout-container {
+            flex: 1;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 2rem;
+            min-width: 280px;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .checkout-container h2 {
+            font-size: 1.3rem;
+            color: brown;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.8rem;
+        }
+
+        .summary-row.total {
+            font-weight: 700;
+            font-size: 1.2rem;
+            border-top: 1px solid #eee;
+            padding-top: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 1rem;
+            background: brown;
+            color: white;
+            font-weight: 600;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .checkout-btn:hover {
+            background: #5c2a00;
+        }
+
+        .trust-badges img {
+            height: 25px;
+            margin-top: 0.5rem;
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width:900px) {
+            .cart-main-container {
+                flex-direction: column;
+            }
+
+            .checkout-container {
+                position: static;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="heading1">
+            <h4>Click here to Explore our Products.</h4>
+        </div>
+    </section>
+    <section>
+        <div class="navbar">
+            <div class="logo">My cart</div>
+            <div class="nav-links">
+                <a href="skincare.html">Skine care</a>
+                <a href="perfume.html">Perfume</a>
+                <a href="#">Track order</a>
+                <a href="#">Offers*</a>
+            </div>
+            <div class="options">
+               <!---- <span id="log" onclick="openmodal()"><i class="fa-solid fa-user" style="color: brown;"></i></span>-->
+               <!----<span id="Cart" onclick="window.location.href='cart.html'"><i class="fa-solid fa-cart-shopping"
+                        style="color: brown;"></i></span>-->
+              <!---- <span id="ham" onclick="hideelement()"><i class="fa-solid fa-bars" style="color: brown;"></i></span>-->
+               <span id="Back" onclick="window.location.href='index.html'"><i class="fa-solid fa-left-long"
+            style="color: brown;"></i></span>
+            </div>
+        </div>
+
+    </section>
+    <section>
+        <div class="nav-2">
+            <div class="skincare"><a href="skincare.html">Skine Care</a></div>
+            <div class="perfume"><a href="perfume.html">Perfume</a></div>
+            <div class="New"><a href="">New products</a></div>
+            <div class="track"><a href="">Track order</a></div>
+            <div class="return"><a href="">Return order</a></div>
+            <div class="backbtn" onclick="back()"><button>Back</button></div>
+        </div>
+    </section>
+    <div class="cart-main-container">
+
+        <!-- LEFT: CART ITEMS -->
+        <div class="added-product-container">
+
+            <div class="added-product-details" data-price="388">
+                <div class="added-product-image"></div>
+                <div class="added-product-price">
+                    <span id="added-product-name">Neem and Aelovar Facewash</span>
+                    <span id="added-product-weight">100g</span>
+                    <div class="quantity">
+                        <button class="decrease">-</button>
+                        <span class="qty">1</span>
+                        <button class="increase">+</button>
+                    </div>
+                </div>
+                <div class="total-added-price">
+                    <span id="total-price-of-product">₹388</span>
+                    <span id="remove"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+            </div>
+
+            <div class="added-product-details" data-price="499">
+                <div class="added-product-image"></div>
+                <div class="added-product-price">
+                    <span id="added-product-name">Herbal Skin Cream</span>
+                    <span id="added-product-weight">250g</span>
+                    <div class="quantity">
+                        <button class="decrease">-</button>
+                        <span class="qty">1</span>
+                        <button class="increase">+</button>
+                    </div>
+                </div>
+                <div class="total-added-price">
+                    <span id="total-price-of-product">₹499</span>
+                    <span id="remove"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+            </div>
+
+            <div class="added-product-details" data-price="299">
+                <div class="added-product-image"></div>
+                <div class="added-product-price">
+                    <span id="added-product-name">Aloe Vera Gel</span>
+                    <span id="added-product-weight">150g</span>
+                    <div class="quantity">
+                        <button class="decrease">-</button>
+                        <span class="qty">1</span>
+                        <button class="increase">+</button>
+                    </div>
+                </div>
+                <div class="total-added-price">
+                    <span id="total-price-of-product">₹299</span>
+                    <span id="remove"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT: PREMIUM CHECKOUT -->
+        <div class="checkout-container">
+            <h2>Order Summary</h2>
+            <div class="summary-row">
+                <span>Subtotal</span><span id="subtotal">₹0</span>
+            </div>
+            <div class="summary-row">
+                <span>Shipping</span><span>Free</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total</span><span id="total">₹0</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+            <div class="trust-badges">
+                <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+                <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard">
+                <img src="https://img.icons8.com/color/48/google-pay-india.png" alt="UPI">
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function updateSummary() {
+            let subtotal = 0;
+            document.querySelectorAll('.added-product-details').forEach(item => {
+                let price = parseInt(item.getAttribute('data-price'));
+                let qty = parseInt(item.querySelector('.qty').innerText);
+                subtotal += price * qty;
+                item.querySelector('#total-price-of-product').innerText = "₹" + (price * qty);
+            });
+            document.getElementById('subtotal').innerText = "₹" + subtotal;
+            document.getElementById('total').innerText = "₹" + subtotal;
+        }
+
+        // QUANTITY BUTTONS
+        document.querySelectorAll('.increase').forEach(btn => {
+            btn.addEventListener('click', function () {
+                let qty = this.parentElement.querySelector('.qty');
+                qty.innerText = parseInt(qty.innerText) + 1;
+                updateSummary();
+            });
+        });
+
+        document.querySelectorAll('.decrease').forEach(btn => {
+            btn.addEventListener('click', function () {
+                let qty = this.parentElement.querySelector('.qty');
+                if (parseInt(qty.innerText) > 1) {
+                    qty.innerText = parseInt(qty.innerText) - 1;
+                    updateSummary();
+                }
+            });
+        });
+
+        // REMOVE BUTTON
+        document.querySelectorAll('.remove').forEach(btn => {
+            btn.addEventListener('click', function () {
+                this.parentElement.remove();
+                updateSummary();
+            });
+        });
+
+        // INITIAL UPDATE
+        updateSummary();
+    </script>
+
+</body>
+
+</html>
