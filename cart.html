@@ -554,6 +554,17 @@
         eyeSlash.style.display = "none";
       }
     });
+    window.onload = () => {
+  updateTotal();
+
+  // Auto scroll if content taller than window
+  const cart = document.querySelector(".cart-container");
+  if (cart.scrollHeight > window.innerHeight) {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  }
+};
+
+    
 
 
   </script>
@@ -561,3 +572,4 @@
 
 
 </html>
+
